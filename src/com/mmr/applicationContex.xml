@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <bean id="hello" class="com.mmr.Hello" >
+        
+    </bean>
+    <bean id="a1" class="com.mmr.Address">
+        <constructor-arg value="Dhaka"></constructor-arg>
+        <constructor-arg value="D"></constructor-arg>
+        <constructor-arg value="BD"></constructor-arg>
+    </bean>
+    <bean id="a2" class="com.mmr.Address" >
+        <constructor-arg value="ihd"></constructor-arg>
+        <constructor-arg value="djffd"></constructor-arg>
+        <constructor-arg value="gdhjka"></constructor-arg>
+    </bean>
+    <bean id="e" class="com.mmr.Employee" >
+        <constructor-arg value="10" type="int"></constructor-arg>
+        <constructor-arg value="Moklesur" type="String"></constructor-arg>
+        <constructor-arg>
+            <list>
+            <ref bean="a1"></ref>
+            <ref bean="a2"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
